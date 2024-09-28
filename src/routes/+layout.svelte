@@ -309,7 +309,7 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="tel:123456789" class="btn phone">
+          <a href="tel:02438803333" class="btn phone">
             <i class="fas fa-phone-alt"></i> Phone
           </a>
         </li>
@@ -372,7 +372,7 @@
             <option value="surgery">Khoa Ngoại</option>
             <option value="pediatrics">Khoa Tai Mũi Họng</option>
             <option value="cardiology">Khoa Khoa Mắt</option>
-            <option value="cardiology">Khoa Liễu </option>
+            <option value="cardiology">Khoa Da Liễu </option>
             <option value="dental">Khoa Răng</option>
             <option value="vaccine">Khoa Vaccine</option>
             <option value="obgyn">Khoa Sản</option>
@@ -486,7 +486,9 @@
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
-        'X-CSRFToken': getCookie('csrftoken')
+        // 'X-CSRFToken': getCookie('csrftoken'),
+        // 'Access-Control-Allow-Headers': 'Content-Type',
+        // 'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({ name, gender, phone, dob, email, nation, address, depart, date, time, symptom }),
 
