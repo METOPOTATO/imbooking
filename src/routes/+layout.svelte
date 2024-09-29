@@ -797,7 +797,7 @@
       return; 
     }
 
-    const response = fetch("http://127.0.0.1:9090/booking/", {
+    const response = fetch("https://pkimedicare.1s2haven.com/booking/", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
