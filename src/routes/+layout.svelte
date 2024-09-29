@@ -133,9 +133,24 @@
     vertical-align: middle;
   }
 
-  .icon {
+  .icon{
     width: 16px;
     height: 16px;
+  }
+
+  .icon-zalo {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .div-zalo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
 
 
@@ -208,6 +223,38 @@
     border-radius: 10px;
     padding: 10px  10px 10px 10px;
     border: 1px #e7fff0;
+  }
+
+  .social-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .social-button a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: #0078FF; /* Màu xanh dương cho Zalo */
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+  }
+
+  .social-button a.facebook {
+      background-color: #4267B2; /* Màu xanh Facebook */
+  }
+
+  /* Thêm hiệu ứng hover cho nút */
+  .social-button a:hover {
+      opacity: 0.8;
   }
 
   @media screen and (max-width: 800px) {
@@ -653,6 +700,17 @@
   <div class="submit">
     <button type="submit" on:click={postData}>Submit</button>
   </div>
+</div>
+
+<div class="social-button">
+  <!-- Nút Zalo -->
+  <a href="https://zalo.me/1076574194805497139" target="_blank" class="a-zalo">
+    <div class="div-zalo">
+      <img src="images/zalo.png" alt="Zalo Icon" class="icon-zalo"/>
+    </div>
+  </a>
+  <!-- Nút Facebook -->
+  <a href="m.me/620954641739050" class="facebook" target="_blank" title="Chat with Facebook"><i class="fab fa-facebook-messenger"></i></a>
 </div>
 
 {#if message}
