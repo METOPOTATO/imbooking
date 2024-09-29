@@ -379,7 +379,7 @@
   <div>
     <table class="appointment-table">
       <tr>
-        <td><input type="text" placeholder="Tên của bạn" bind:value={name}>
+        <td><input type="text" placeholder="Tên của bạn *" bind:value={name}>
           {#if nameError}
             <span style="color: red;">{nameError}</span>
           {/if}
@@ -396,7 +396,7 @@
         </td>
       </tr>
       <tr>
-        <td><input type="tel" placeholder="Số điện thoại" bind:value={phone}>
+        <td><input type="tel" placeholder="Số điện thoại *" bind:value={phone}>
           {#if phoneError}
             <span style="color: red;">{phoneError}</span>
           {/if}
