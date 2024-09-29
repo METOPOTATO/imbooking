@@ -617,14 +617,15 @@
         <td colspan="2">
           <select id="department"  bind:value={depart}>
             <option value="" disabled selected>Chọn Khoa</option>
-            <option value="general">Khoa Nội</option>
+            <option value="2">Khoa Nội</option>
             <option value="surgery">Khoa Ngoại</option>
-            <option value="pediatrics">Khoa Tai Mũi Họng</option>
-            <option value="cardiology">Khoa Khoa Mắt</option>
-            <option value="cardiology">Khoa Da Liễu </option>
-            <option value="dental">Khoa Răng</option>
-            <option value="vaccine">Khoa Vaccine</option>
-            <option value="obgyn">Khoa Sản</option>
+            <option value="5">Khoa Tai Mũi Họng</option>
+            <option value="12">Khoa Khoa Mắt</option>
+            <option value="6">Khoa Da Liễu </option>
+            <option value="8">Khoa Răng</option>
+            <option value="10">Khoa Vaccine</option>
+            <option value="9">Khoa Sản</option>
+            <option value="9">Khoa Khám sức khỏe</option>
           </select>
         </td>
       </tr>
