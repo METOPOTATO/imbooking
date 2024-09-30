@@ -401,7 +401,7 @@
             <span style="color: red;">{phoneError}</span>
           {/if}
         </td>
-        <td><Flatpickr class='date-picker' bind:value={dob} placeholder='Ngày sinh' /></td>
+        <td><Flatpickr class='date-picker' bind:value={dob} placeholder='Ngày sinh' allowInput/></td>
   
       </tr>
       <tr>
