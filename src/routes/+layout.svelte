@@ -351,7 +351,7 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="m.me/620954641739050" target="_blank" class="btn messenger">
+          <a href="https://m.me/620954641739050" target="_blank" class="btn messenger">
             <i class="fab fa-facebook-messenger"></i> Messenger
           </a>
         </li>
@@ -711,7 +711,7 @@
     </div>
   </a>
   <!-- Nút Facebook -->
-  <a href="m.me/620954641739050" class="facebook" target="_blank" title="Chat with Facebook"><i class="fab fa-facebook-messenger"></i></a>
+  <a href="https://m.me/620954641739050" class="facebook" target="_blank" title="Chat with Facebook"><i class="fab fa-facebook-messenger"></i></a>
 </div>
 
 {#if message}
