@@ -401,7 +401,8 @@
             <span style="color: red;">{phoneError}</span>
           {/if}
         </td>
-        <td><Flatpickr class='date-picker' bind:value={dob} placeholder='Ngày sinh' altInput/></td>
+        <!-- <td><Flatpickr id='dob_picker' class='date-picker' bind:value={dob} placeholder='Ngày sinh'/></td> -->
+        <td><input bind:this={dobInput} type="text" placeholder="Ngày sinh"></td>
   
       </tr>
       <tr>
@@ -631,7 +632,7 @@
       </tr>
       <tr>
         <td>
-          <Flatpickr bind:value={date} placeholder='Ngày khám' class='date-picker'/>
+          <input bind:this={dateInput} placeholder='Ngày khám' class='date-picker'/>
           <!-- <Datepicker bind:selected={date} /> -->
         </td>
         <td>
@@ -729,12 +730,40 @@
 </footer>
 
 <script>
+  import { onMount } from "svelte";
   import Flatpickr from 'svelte-flatpickr';
-
+  import flatpickr from 'flatpickr';
   import 'flatpickr/dist/flatpickr.css'
   import './custom.css';
   // import DatePicker from 'svelte-date-picker'
   import { fade } from 'svelte/transition';
+
+  let dobInput;
+  let dateInput;
+
+  const dob_options = {
+    enableTime: false,       
+    disableMobile: true, 
+    onChange: (selectedDates, dateStr) => {
+      dob = dateStr; 
+    }
+  };
+
+  const date_options = {
+    enableTime: false,       
+    disableMobile: true, 
+    onChange: (selectedDates, dateStr) => {
+      date = dateStr; 
+    }
+  };
+
+  // Khởi tạo Flatpickr sau khi component đã gắn vào DOM
+  onMount(() => {
+    flatpickr(dobInput, dob_options);
+    flatpickr(dateInput, date_options);
+  });
+
+
   let name = '';
   let gender = 'male';
   let phone = '';
@@ -798,7 +827,7 @@
       return; 
     }
 
-    const response = fetch("https://pkimedicare.1s2haven.com/booking/", {
+    const response = fetch("http://127.0.0.1:9090/booking/", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
